@@ -1,4 +1,17 @@
 export default {
+
+  env: {
+    MEDIA_UPLOAD_URL: process.env.SERVER_UPLOAD_URL,
+    TINYMCE_TOKEN: process.env.TINYMCE_TOKEN,
+    TINYMCE_STYLE_URL: process.env.TINYMCE_STYLE_URL,
+  },
+  privateRuntimeConfig: {
+    ckeditorToken: process.env.CKEDITOR_TOKEN,
+    mediaUploadUrl: process.env.SERVER_UPLOAD_URL,
+    tinymceToken: process.env.TINYMCE_TOKEN,
+  },
+
+  // 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'ek-editor',
@@ -15,10 +28,12 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    "~/assets/css/tinymce-preview.scss",
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    // { src: "~/plugins/ckeditor", mode: 'client' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
